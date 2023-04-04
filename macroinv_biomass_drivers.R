@@ -34,17 +34,12 @@ set.seed(667) #set the seed for reproducibility
 
 #=============================== LOAD LIBRARIES
 library(dplyr) # version 1.1.0, data manipulation
-library(tibble) # version 3.1.8, data manipulation
 library(pcaPP) # version 2.0.3, sparse PCA
 library(lme4) # version 1.1.31, mixed modelling
 library(partR2) # version 0.9.1, variance partitioning
 library(ggplot2) # version 3.4.0, prepare figures
 library(cowplot) # version 1.1.1, arrange figures
 
-#library(vegan)
-#source("multiplot.R")
-#library(usdm) # version 1.1.18, check collinearity
-#library(lmerTest) # version 3.1.3, mixed modelling
 
 #=============================== DATA IMPORT and MANIPULATION
 
