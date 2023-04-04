@@ -1,4 +1,4 @@
-# R Scripts for: Burgazzi et al. 2023 (add link later)
+# R Scripts for: Burgazzi et al. 2023 (the manuscript will be submitted soon)
 # Title: Basin-scale variables drive macroinvertebrate biomass in low-order streams across different mountain ecoregions
 
 # Authors: Gemma Burgazzi, Alex Laini, Pierluigi Viaroli, Stefano Fenoglio, Verena C. Schreiner, Ralf B. Schäfer, Alberto Doretto
@@ -15,8 +15,10 @@
 # R version 4.1.2 (2021-11-01) -- "Bird Hippie"
 
 # With this study, we aim to:
-# 1) evaluate the relationship between the biomass of macroinvertebrate communities (as mean biomass per organism per square meter) and several environmental variables acting at three different spatial scales (patch, reach, and basin)
-# 2) investigate transferability of the results among two geographic areas (the Maritime-Cottian Alps and the Tuscan-Emilian Apennine, hereafter ecoregions) by assessing the concordance of dominant drivers. 
+# 1) evaluate the relationship between the biomass of macroinvertebrate communities (as mean biomass per organism per square meter) and several environmental variables
+  # acting at three different spatial scales (patch, reach, and basin)
+# 2) investigate transferability of the results among two geographic areas (the Maritime-Cottian Alps and the Tuscan-Emilian Apennine, hereafter ecoregions) by 
+  # assessing the concordance of dominant drivers. 
 
 # We sampled 10 streams in each geographic region, with 6 sampling point per stream
 
@@ -259,7 +261,8 @@ summary(ape_vp)
 g1 <- ggplot(env, aes(x=ecoregion, y=m_bio, fill=ecoregion)) + geom_boxplot(color="black", linewidth=0.8) + 
   scale_fill_manual(values = alpha(c("blue", "darkgreen"), 0.7)) + 
   theme_test()+ 
-  theme(legend.position = "none", plot.title = element_text(size = 14, face = "bold", colour = "black"), axis.text=element_text(size=12, colour = "black"), axis.title=element_text(size=12,face="bold")) + 
+  theme(legend.position = "none", plot.title = element_text(size = 14, face = "bold", colour = "black"), axis.text=element_text(size=12, colour = "black"), 
+        axis.title=element_text(size=12,face="bold")) + 
   ggtitle("(a) Biomass variability among ecoregions") + ylab("log-transformed biomass/abundance ratio") + 
   theme(plot.title = element_text(hjust = 0.5)) + 
   xlab("") 
@@ -269,7 +272,8 @@ g1
 g2 <- ggplot(env, aes(y=stream, x=m_bio, fill=ecoregion)) + geom_boxplot(color="black", linewidth=0.8) + 
   scale_fill_manual(values = alpha(c("blue", "darkgreen"), 0.7)) + 
   theme_test()+ 
-  theme(legend.position = "none", plot.title = element_text(size = 14, face = "bold", colour = "black"), axis.text=element_text(size=12, colour = "black"), axis.title=element_text(size=12,face="bold")) + 
+  theme(legend.position = "none", plot.title = element_text(size = 14, face = "bold", colour = "black"), axis.text=element_text(size=12, colour = "black"), 
+        axis.title=element_text(size=12,face="bold")) + 
   ggtitle("(b) Biomass variability among streams") + ylab("log-transformed biomass/abundance ratio") + 
   theme(plot.title = element_text(hjust = 0.5)) + 
   xlab("") 
