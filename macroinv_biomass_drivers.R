@@ -22,6 +22,13 @@
 
 # We sampled 10 streams in each geographic region, with 6 sampling point per stream
 
+# Code sections:
+# 1. Load libraries
+# 2. Data import and manipulation
+# 3. Create new predictors (with sparse PCA)
+# 4. Mixed models
+# 5. Variance partitioning
+# 6. Figures
 
 set.seed(667) #set the seed for reproducibility
 
