@@ -75,7 +75,7 @@ env_ape$stream <- droplevels(env_ape$stream) # remove extra levels
 # Dominant substrate (sub_dom)
 # Coarse Particulate Organic Matter (cpom)
 
-# Alp
+# Alps
 env_st_patch_alp <- subset(env_alp, select=c(vel, depth, froude, sub_dom, cpom)) # select patch scale variables
 env_st_patch_alp <- model.matrix(~., env_st_patch_alp)[, -c(1,8)] #convert substrate into dummy variables. Also remove column 1 (intercept) and 8 (substrate organic, empty)
 k.max <- 3 # set the number of wished axes
@@ -89,7 +89,7 @@ spc_patch_alp_scores <- spc_patch_alp$scores%>%
   as.data.frame() %>%
   rownames_to_column("ID") # store SPC axes in the new db
 
-#Ape
+#Apennines
 env_st_patch_ape <- subset(env_ape, select=c(vel, depth, froude, sub_dom, cpom)) # select patch scale variables
 env_st_patch_ape <- model.matrix(~., env_st_patch_ape)[, -c(1)] # convert substrate into dummy variables. Also remove column 1 (intercept)
 summary(env_st_patch_ape)
@@ -119,7 +119,7 @@ spc_patch_ape_scores <- spc_patch_ape$scores%>%
 # % of agricultural land use in 1 km buffer (Agr_1km)
 # % of natural land use in 1 km buffer (Nat_1km)
 
-#Alp
+#Alps
 env_st_reach_alp <- subset(env_alp, select=c(wcw, acw, temp, ph, cond_corr, elevation, strahler, Urb_1km, Agr_1km, Nat_1km)) # select reach scale variables
 k.max <- 3 # set the number of wished axes
 oTPO_D1_reach_alp <- opt.TPO(scale(env_st_reach_alp), k.max = k.max, method = "sd") # compute a suggestion for lambda parameter (to be used in sPCAgrid)
@@ -132,7 +132,7 @@ spc_reach_alp_scores <- spc_reach_alp$scores%>%
   as.data.frame() %>%
   rownames_to_column("ID") # store SPC axes in the new db
 
-#Ape
+#Apennines
 env_st_reach_ape <- subset(env_ape, select=c(wcw, acw, temp, ph, cond_corr, elevation, strahler, Urb_1km, Agr_1km, Nat_1km)) # select reach scale variables
 k.max <- 3 # set the number of wished axes
 oTPO_D1_reach_ape <- opt.TPO(scale(env_st_reach_ape), k.max = k.max, method = "sd") # compute a suggestion for lambda parameter (to be used in sPCAgrid)
@@ -156,7 +156,7 @@ spc_reach_ape_scores <- spc_reach_ape$scores%>%
 # Mean value of cumulated daily precipitations (Prec_mean)
 # Mean daily air temperature (Air_temp)
 
-#Alp
+#Alps
 env_st_basin_alp <- subset(env_alp, select=c(upslope_area, Urb, Agr, Nat, Prec_mean, Air_temp)) # select basin scale variables
 k.max <- 3 # set the number of wished axes
 oTPO_D1_basin_alp <- opt.TPO(scale(env_st_basin_alp), k.max = k.max, method = "sd") # compute a suggestion for lambda parameter (to be used in sPCAgrid)
@@ -169,7 +169,7 @@ spc_basin_alp_scores <- spc_basin_alp$scores%>%
   as.data.frame() %>%
   rownames_to_column("ID") # store SPC axes in the new db
 
-#Ape
+#Apennines
 env_st_basin_ape <- subset(env_ape, select=c(upslope_area, Urb, Agr, Nat, Prec_mean, Air_temp)) # select basin scale variables
 k.max <- 3 # set the number of wished axes
 oTPO_D1_basin_ape <- opt.TPO(scale(env_st_basin_ape), k.max = k.max, method = "sd") # compute a suggestion for lambda parameter (to be used in sPCAgrid)
