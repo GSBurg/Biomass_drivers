@@ -1,7 +1,7 @@
 # R Scripts for: Burgazzi et al. 2023
 # Published in Journal of Biogeography
 # Title: Basin-scale variables drive macroinvertebrate biomass in low-order streams across different mountain ecoregions
-#  https://doi.org/10.1111/jbi.14710
+# https://doi.org/10.1111/jbi.14710
 
 # Authors: Gemma Burgazzi, Alex Laini, Pierluigi Viaroli, Stefano Fenoglio, Verena C. Schreiner, Ralf B. Schäfer, Alberto Doretto
 
